@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect Four Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div id="control" class="control">
+      <div id="menu" class="menu"></div>
+      <div id="logo" class="logo"></div>
+      <div id="restert" class="restart">
+        <button id="restart" class="restart">RESTART</button>
+      </div>
+    </div>
+    <div class="game">
+      <div id="player-1" class="player">
+        <div id="red-smile" class="smile">
+          <svg
+            width="54px"
+            height="59px"
+            viewBox="0 0 54 59"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            data-testid="icon"
+          >
+            <title>player-one</title>
+            <g
+              id="Designs"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g id="player-one">
+                <circle
+                  id="Oval-Copy-21"
+                  fill="#000000"
+                  cx="27"
+                  cy="27"
+                  r="27"
+                ></circle>
+                <circle
+                  id="Oval-Copy-40"
+                  fill="#000000"
+                  cx="27"
+                  cy="32"
+                  r="27"
+                ></circle>
+                <circle
+                  id="Oval-Copy-11"
+                  fill="#FD6687"
+                  cx="27"
+                  cy="27"
+                  r="24"
+                ></circle>
+                <g
+                  id="Group-8"
+                  transform="translate(19.000000, 17.000000)"
+                  stroke="#000000"
+                  stroke-width="3"
+                >
+                  <path
+                    d="M6,26.75 C12.627417,26.75 18,21.377417 18,14.75 C18,8.122583 12.627417,2.75 6,2.75"
+                    id="Oval-Copy-11"
+                    transform="translate(12.000000, 14.750000) rotate(90.000000) translate(-12.000000, -14.750000) "
+                  ></path>
+                  <g id="Group-7" transform="translate(9.750000, 0.000000)">
+                    <line
+                      x1="0.5"
+                      y1="0"
+                      x2="0.5"
+                      y2="5.9844035"
+                      id="Path"
+                    ></line>
+                    <line
+                      x1="10.5"
+                      y1="0"
+                      x2="10.5"
+                      y2="5.9844035"
+                      id="Path-Copy"
+                    ></line>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <h3>PLAYER 1</h3>
+        <span id="player-1-score" class="score">0</span>
+      </div>
+      <div id="game-board" class="game-board"></div>
+      <div id="player-2" class="player">
+        <div id="yellow-smile" class="smile">
+          <svg
+            width="54px"
+            height="59px"
+            viewBox="0 0 54 59"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            data-testid="icon"
+          >
+            <title>player-two</title>
+            <g
+              id="Designs"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="player-two"
+                transform="translate(27.000000, 29.500000) scale(-1, 1) translate(-27.000000, -29.500000) "
+              >
+                <circle
+                  id="Oval-Copy-21"
+                  fill="#000000"
+                  cx="27"
+                  cy="27"
+                  r="27"
+                ></circle>
+                <circle
+                  id="Oval-Copy-40"
+                  fill="#000000"
+                  cx="27"
+                  cy="32"
+                  r="27"
+                ></circle>
+                <circle
+                  id="Oval-Copy-11"
+                  fill="#FFCE67"
+                  cx="27"
+                  cy="27"
+                  r="24"
+                ></circle>
+                <g
+                  id="Group-8"
+                  transform="translate(19.000000, 17.000000)"
+                  stroke="#000000"
+                  stroke-width="3"
+                >
+                  <path
+                    d="M6,26.75 C12.627417,26.75 18,21.377417 18,14.75 C18,8.122583 12.627417,2.75 6,2.75"
+                    id="Oval-Copy-11"
+                    transform="translate(12.000000, 14.750000) rotate(90.000000) translate(-12.000000, -14.750000) "
+                  ></path>
+                  <g id="Group-7" transform="translate(9.750000, 0.000000)">
+                    <line
+                      x1="0.5"
+                      y1="0"
+                      x2="0.5"
+                      y2="5.9844035"
+                      id="Path"
+                    ></line>
+                    <line
+                      x1="10.5"
+                      y1="0"
+                      x2="10.5"
+                      y2="5.9844035"
+                      id="Path-Copy"
+                    ></line>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <h3>PLAYER 2</h3>
+        <span id="player-2-score" class="score">0</span>
+      </div>
+    </div>
+    <div class="turn-container">
+      <div id="turn" class="turn">
+        <span id="current-turn" class="current-turn">PLAYER 1'S TURN</span>
+        <span id="timer" class="timer">30S</span>
+      </div>
+      <div id="winner" class="winner hidden">
+        <span id="winner-player" class="winner-player">PLAYER 1</span>
+        <span id="wins" class="wins">WINS</span>
+        <button id="play-again-btn" class="play-again-btn">PLAY AGAIN</button>
+      </div>
+    </div>
+  </body>
+</html>
