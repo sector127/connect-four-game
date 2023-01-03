@@ -35,6 +35,15 @@ const timer = () => {
     timerEl.innerText = `${seconds}s`;
     seconds--;
     if (seconds == 0) {
+      if ((currentPlayer = player1)) {
+        currentPlayer = player2;
+        currentTurnEl.innerText = "PLAYER 2'S TURN";
+        document.documentElement.style.setProperty("--my-var", "#ffce67");
+      } else {
+        currentPlayer = player1;
+        currentTurnEl.innerText = "PLAYER 1'S TURN";
+        document.documentElement.style.setProperty("--my-var", "#fd6687");
+      }
       seconds = 30;
     }
   }, 1000);
